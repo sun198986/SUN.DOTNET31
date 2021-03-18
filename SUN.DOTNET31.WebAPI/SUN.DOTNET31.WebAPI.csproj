@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Document\SUN.DOTNET31.WebAPI\SUN.DOTNET31.WebAPI\SUN.DOTNET31.WebAPI.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.8" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SUN.DOTNET31.Core\SUN.DOTNET31.Core.csproj" />
+    <ProjectReference Include="..\System.EFCore\System.EFCore.csproj" />
+    <ProjectReference Include="..\System.Model\System.Model.csproj" />
+    <ProjectReference Include="..\System.Repasitory\System.Repasitory.csproj" />
+  </ItemGroup>
+
+</Project>

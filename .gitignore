@@ -3,3 +3,15 @@
 ################################################################################
 
 /.vs/SUN.DOTNET31.WebAPI
+/SUN.DOTNET31.Core/obj
+/SUN.DOTNET31.Core/bin/Debug/netcoreapp3.1
+/SUN.DOTNET31.WebAPI/bin/Debug/netcoreapp3.1
+/SUN.DOTNET31.WebAPI/obj
+/System.EFCore/bin/Debug/netcoreapp3.1
+/System.EFCore/obj
+/System.Entity/bin/Debug/netcoreapp3.1
+/System.Entity/obj
+/System.Model/bin/Debug/netcoreapp3.1
+/System.Model/obj
+/System.Repasitory/bin/Debug/netcoreapp3.1
+/System.Repasitory/obj
