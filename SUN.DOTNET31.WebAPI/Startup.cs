@@ -7,6 +7,9 @@ using System.EFCore;
 using System.Repasitory;
 using SUN.DOTNET31.Core.Swagger;
 using System.Repasitory.Impl;
+using System.Reflection;
+using Common.Repasitory.Pattern;
+using Common.Repasitory.Pattern.Impl;
 
 namespace SUN.DOTNET31.WebAPI
 {

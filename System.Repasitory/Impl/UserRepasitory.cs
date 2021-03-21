@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Common.Repasitory.Pattern.Impl;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Scrutor;
 using System.Collections.Generic;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace System.Repasitory.Impl
 {
-    public class UserRepasitory : IUserRepasitory
+    public class UserRepasitory : RepasitoryBase<User>, IUserRepasitory
     {
-        private MSDBContext _dbContext;
-        public UserRepasitory(MSDBContext mSDBContext)
+        private readonly MSDBContext _dbContext;
+        public UserRepasitory(MSDBContext mSDBContext):base(mSDBContext)
         {
             this._dbContext = mSDBContext;
         }

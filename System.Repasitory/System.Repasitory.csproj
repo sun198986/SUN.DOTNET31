@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\System.EFCore\System.EFCore.csproj" />
-    <ProjectReference Include="..\System.Entity\System.Entity.csproj" />
+    <ProjectReference Include="..\Common.Repasitory.Pattern\Common.Repasitory.Pattern.csproj" />
   </ItemGroup>
 
 </Project>

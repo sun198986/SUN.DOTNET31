@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.EFCore", "System.EFC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUN.DOTNET31.Core", "SUN.DOTNET31.Core\SUN.DOTNET31.Core.csproj", "{0BEC31AE-2A01-4F33-850A-F25C592980E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Repasitory.Pattern", "Common.Repasitory.Pattern\Common.Repasitory.Pattern.csproj", "{71481F36-8B66-4DFD-AAA3-7127399D444D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{0BEC31AE-2A01-4F33-850A-F25C592980E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BEC31AE-2A01-4F33-850A-F25C592980E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BEC31AE-2A01-4F33-850A-F25C592980E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71481F36-8B66-4DFD-AAA3-7127399D444D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71481F36-8B66-4DFD-AAA3-7127399D444D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71481F36-8B66-4DFD-AAA3-7127399D444D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71481F36-8B66-4DFD-AAA3-7127399D444D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{29C99045-CC59-49AD-9C2F-01299ED75E9E} = {0589E34D-8B2D-46E8-B101-4E913BA09DAC}
 		{BD9E5E4D-F50C-439A-87DA-8D3EB0924C8A} = {6057EDE1-16A7-410A-A80F-C4B32EE99909}
 		{5DC0B975-478E-4F14-B18C-C3C1763AB026} = {D74D3F15-00DC-4DE9-8C2D-E533BB5184DF}
+		{71481F36-8B66-4DFD-AAA3-7127399D444D} = {6057EDE1-16A7-410A-A80F-C4B32EE99909}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DDE2E1C-66CF-4662-9C61-A983B16640DE}
