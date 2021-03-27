@@ -4,12 +4,29 @@
         <name>SUN.DOTNET31.WebAPI</name>
     </assembly>
     <members>
+        <member name="T:SUN.DOTNET31.WebAPI.Controllers.CompanyController">
+            <summary>
+            公司
+            </summary>
+        </member>
+        <member name="M:SUN.DOTNET31.WebAPI.Controllers.CompanyController.#ctor(System.Repasitory.ICompanyRepository)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="companyRepository"></param>
+        </member>
+        <member name="M:SUN.DOTNET31.WebAPI.Controllers.CompanyController.Index">
+            <summary>
+            get方法
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:SUN.DOTNET31.WebAPI.Controllers.UserController">
             <summary>
             用户
             </summary>
         </member>
-        <member name="M:SUN.DOTNET31.WebAPI.Controllers.UserController.#ctor(System.Repasitory.IUserRepasitory)">
+        <member name="M:SUN.DOTNET31.WebAPI.Controllers.UserController.#ctor(System.Repasitory.IUserRepository)">
             <summary>
             构造函数
             </summary>
@@ -42,6 +59,11 @@
         <member name="T:SUN.DOTNET31.WebAPI.Startup">
             <summary>
             启动方法
+            </summary>
+        </member>
+        <member name="F:SUN.DOTNET31.WebAPI.Startup.ConsoleLoggerFactory">
+            <summary>
+            日志
             </summary>
         </member>
         <member name="M:SUN.DOTNET31.WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">

@@ -10,6 +10,7 @@ using System.Repasitory.Impl;
 using System.Reflection;
 using Common.Repasitory.Pattern;
 using Common.Repasitory.Pattern.Impl;
+using Microsoft.Extensions.Logging;
 
 namespace SUN.DOTNET31.WebAPI
 {
@@ -18,6 +19,18 @@ namespace SUN.DOTNET31.WebAPI
     /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// 日志
+        /// </summary>
+        public static readonly ILoggerFactory ConsoleLoggerFactory =
+          LoggerFactory.Create(builder =>
+          {
+              builder.AddFilter((category, level) =>
+                  category == DbLoggerCategory.Database.Command.Name
+                  && level == LogLevel.Information).AddConsole();
+          });
+
+
         /// <summary>
         /// This method gets called by the runtime. Use this method to add services to the container.
         /// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
@@ -28,10 +41,14 @@ namespace SUN.DOTNET31.WebAPI
             //mysql
             services.AddDbContext<MSDBContext>(options =>
             {
-                options.UseMySql("Database=System.Test;Data Source=192.168.241.128;Port=3306;User Id=root;Password=123456;Charset=utf8;TreatTinyAsBoolean=false;");
+                options.UseMySql("Database=System.Test;Data Source=192.168.241.128;Port=3306;User Id=root;Password=123456;Charset=utf8;TreatTinyAsBoolean=false;")
+                .UseLoggerFactory(ConsoleLoggerFactory)
+                .EnableSensitiveDataLogging()
+                ;//打印sql脚本
             });
 
-            services.AddScoped<IUserRepasitory, UserRepasitory>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICompanyRepository, CompanyRepository>();
 
             services.AddControllers();
 
@@ -39,7 +56,7 @@ namespace SUN.DOTNET31.WebAPI
             services.InitSwaggerConfig();
         }
 
-        
+
         /// <summary>
         /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         /// </summary>

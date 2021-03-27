@@ -10,7 +10,7 @@
   "profiles": {
     "SUN.DOTNET31.WebAPI": {
       "commandName": "Project",
-      "launchBrowser": true,
+      //"launchBrowser": true,
       "launchUrl": "swagger/index.html",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {

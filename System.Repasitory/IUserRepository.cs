@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace System.Repasitory
 {
 
-    public interface IUserRepasitory:IRepasitoryBase<User>
+    public interface IUserRepository:IRepasitoryBase<User>
     {
         public Task<IEnumerable<User>> GetUser();
     }

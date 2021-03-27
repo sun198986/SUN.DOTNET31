@@ -2,39 +2,35 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Model;
 using System.Repasitory;
 using System.Threading.Tasks;
 
 namespace SUN.DOTNET31.WebAPI.Controllers
 {
-    
     /// <summary>
-    /// 用户
+    /// 公司
     /// </summary>
     [ApiController]
-    [Route("api/user")]
-    public class UserController:ControllerBase
+    [Route("api/company")]
+    public class CompanyController:ControllerBase
     {
-
-        private IUserRepository _userRepasitory;
-
+        private readonly ICompanyRepository _companyRepository;
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="userRepasitory"></param>
-        public UserController(IUserRepository userRepasitory)
+        /// <param name="companyRepository"></param>
+        public CompanyController(ICompanyRepository companyRepository)
         {
-            this._userRepasitory = userRepasitory;
+            this._companyRepository = companyRepository;
         }
+
         /// <summary>
-        /// 获取用户信息
+        /// get方法
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ActionResult> GetUser()
-        {
-            var list =await _userRepasitory.GetUser();
+        public async Task<ActionResult> Index() {
+            var list  = await _companyRepository.GetCompany();
             return Ok(list);
         }
     }

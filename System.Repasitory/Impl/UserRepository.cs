@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace System.Repasitory.Impl
 {
-    public class UserRepasitory : RepasitoryBase<User>, IUserRepasitory
+    public class UserRepository : RepasitoryBase<User>, IUserRepository
     {
         private readonly MSDBContext _dbContext;
-        public UserRepasitory(MSDBContext mSDBContext):base(mSDBContext)
+        public UserRepository(MSDBContext mSDBContext):base(mSDBContext)
         {
             this._dbContext = mSDBContext;
         }
 
         public async Task<IEnumerable<User>> GetUser()
         {
-            return await _dbContext.User.ToListAsync();
+            return await _dbContext.Users.ToListAsync();
         }
     }
 }
